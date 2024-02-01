@@ -1,0 +1,17 @@
+.s-header {
+  background-color: $blue-light;
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+
+  &__row {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+
+  &__col {
+    //
+  }
+}

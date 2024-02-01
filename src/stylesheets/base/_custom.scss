@@ -1,0 +1,30 @@
+// Custom variables
+
+
+::selection,
+mark,
+mark {
+  color: $white;
+  background-color: $primary;
+}
+
+body {
+  font-family: $font-family-base;
+  text-underline-offset: 0.188rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > .s-main {
+    flex: 1 0 auto;
+  }
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+.container {
+  max-width: map-get($container-max-widths, 'xl');
+}

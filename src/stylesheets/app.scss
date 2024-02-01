@@ -1,0 +1,109 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import 'node_modules/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+$white: #fff;
+$black: #2D2D2C;
+$gray: #D9D9D9;
+
+$blue-dark: #0B506B;
+$blue-light: #139EB9;
+$blue-shadow: #011C33;
+
+$pink-dark: #AE252A;
+$pink-light: #EBBBC3;
+$pink-shadow: #E30421;
+
+$green-dark: #B2D795;
+$green-light: #95C11F;
+
+$body-color: $blue-dark;
+$body-bg: $white;
+$link-color: $blue-dark;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+$font-family-base: Montserrat, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+$font-family-code: Georgia, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-margin-bottom:      1.5rem !default;
+
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/variables-dark';
+
+// 4. Include any default map overrides here
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+// 5. Include remainder of required parts
+@import 'node_modules/bootstrap/scss/maps';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/root';
+
+// 6. Optionally include any other parts as needed
+@import 'node_modules/bootstrap/scss/utilities';
+@import 'node_modules/bootstrap/scss/reboot';
+@import 'node_modules/bootstrap/scss/type';
+@import 'node_modules/bootstrap/scss/images';
+@import 'node_modules/bootstrap/scss/containers';
+@import 'node_modules/bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/helpers';
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import 'node_modules/bootstrap/scss/utilities/api';
+
+// 8. Add additional custom code here
+@import 'base/custom';
+@import 'sections/header';
+@import 'sections/footer';
