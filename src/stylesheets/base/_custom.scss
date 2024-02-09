@@ -28,14 +28,27 @@ strong {
   max-width: map-get($container-max-widths, 'xl');
 }
 
-.fs-xs {
-  font-size: $font-size-xs;
+.img-fitcover {
+  object-fit: cover;
+  width: 100%;
 }
 
-.fs-sm {
-  font-size: $font-size-sm;
+.fs-base {
+  font-size: $font-size-base !important;
 }
 
 .fs-lg {
-  font-size: $font-size-lg;
+  font-size: $font-size-lg !important;
+}
+
+.fs-sm {
+  font-size: $font-size-sm !important;
+}
+
+.fs-xs {
+  font-size: $font-size-xs !important;
+}
+
+.ff-base {
+  font-family: $font-family-base;
 }

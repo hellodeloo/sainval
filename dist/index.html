@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="stylesheets/app.css" />
   </head>
 
-  <body id="top">
+  <body id="top" class="p-home">
     <nav role="navigation" aria-label="Accès rapide" tabindex="0" class="visually-hidden">
       <ul>
         <li><a href="#nav-primary">Aller au menu principal</a></li>
@@ -39,9 +39,17 @@
     <header role="banner" id="header">
   <section class="s-header">
     <div class="s-header__container container">
-      <div class="s-header__row row">
-        <div class="s-header__col col-12">
-          header
+      <div class="s-header__row row align-items-center">
+        <div class="s-header__col s-header__col--logo col">
+          <img src="images/sainval-logo-simple.png" height="100" alt="">
+        </div>
+        <div class="s-header__col s-header__col--burger col-auto">
+          <i class="ri-menu-line ri-2x"></i>
+        </div>
+      </div>
+      <div class="s-header__row row align-items-center justify-content-center">
+        <div class="s-header__col s-header__col--biglogo col-auto">
+          <img src="images/sainval-logo.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -54,8 +62,31 @@
         <section class="s-section">
           <div class="s-section__container container">
             <div class="s-section__row row">
-              <div class="s-section__col col-12 col-lg-10 col-xl-8 col-xxl-12 bg-black">
+              <div class="s-section__col col-12">
                 <p>Base section content</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="s-chiffres">
+          <div class="s-chiffres__container container">
+            <div class="s-chiffres__row row justify-content-center">
+              <div class="s-chiffres__col col-12 col-md-auto">
+                <div class="s-chiffres__stack g-3">
+                  <div>
+                    <strong>5</strong>
+                    <span>Avocats</span>
+                  </div>
+                  <div>
+                    <strong>45</strong>
+                    <span>Années <br class="d-none d-md-inline">d’expériences <br class="d-none d-md-inline">cumulées</span>
+                  </div>
+                  <div>
+                    <strong>1</strong>
+                    <span>Objectif <br class="d-none d-md-inline">LE VOTRE</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

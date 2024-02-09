@@ -1,17 +1,32 @@
 .s-header {
-  background-color: $blue-light;
   position: relative;
   z-index: 1;
-
-  &__container {
-    max-width: map-get($container-max-widths, 'xl');
-  }
-
-  &__row {
-    max-width: map-get($container-max-widths, 'xl');
-  }
+  color: $white;
+  background-color: $blue-dark;
+  background-image: url('../images/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
   &__col {
-    //
+    &--logo {
+      min-height: 100px;
+
+      img {
+        .p-home & {
+          display: none;
+        }
+      }
+    }
+
+    &--biglogo {
+      padding-top: 260px;
+      padding-bottom: 280px;
+      display: none;
+
+      .p-home & {
+        display: inline-flex;
+      }
+    }
   }
 }
