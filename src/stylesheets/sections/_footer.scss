@@ -10,8 +10,12 @@
   padding-bottom: 48px;
 
   @include media-breakpoint-up(md) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__container {
+    max-width: map-get($container-max-widths, 'xl');
   }
 
   &__col {

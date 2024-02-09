@@ -86,6 +86,7 @@ $spacers: (
   5: $spacer * 2,
   6: $spacer * 3,
   7: $spacer * 4,
+  8: $spacer * 5,
 );
 
 $grid-breakpoints: (
@@ -93,16 +94,16 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1280px,
-  xxl: 1440px,
+  xl: 1120px,
+  xxl: 1340px,
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px,
-  xxl: 1400px,
+  xl: 1080px,
+  xxl: 1280px,
 );
 
 // 5. Include remainder of required parts
@@ -118,6 +119,7 @@ $container-max-widths: (
 @import 'node_modules/bootstrap/scss/containers';
 @import 'node_modules/bootstrap/scss/grid';
 @import 'node_modules/bootstrap/scss/helpers';
+@import 'node_modules/bootstrap/scss/transitions';
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import 'node_modules/bootstrap/scss/utilities/api';

@@ -24,8 +24,14 @@ strong {
   font-weight: $font-weight-bold;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 .container {
-  max-width: map-get($container-max-widths, 'xl');
+  max-width: map-get($container-max-widths, 'xxl');
 }
 
 .img-fitcover {
