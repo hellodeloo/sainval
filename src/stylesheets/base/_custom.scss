@@ -1,6 +1,5 @@
 // Custom variables
 
-
 ::selection,
 mark,
 mark {
@@ -27,4 +26,16 @@ strong {
 
 .container {
   max-width: map-get($container-max-widths, 'xl');
+}
+
+.fs-xs {
+  font-size: $font-size-xs;
+}
+
+.fs-sm {
+  font-size: $font-size-sm;
+}
+
+.fs-lg {
+  font-size: $font-size-lg;
 }

@@ -6,19 +6,31 @@
 
 // 2. Include any default variable overrides here
 $white: #fff;
-$black: #2D2D2C;
-$gray: #D9D9D9;
+$black: #2d2d2c;
+$gray: #d9d9d9;
 
-$blue-dark: #0B506B;
-$blue-light: #139EB9;
-$blue-shadow: #011C33;
+$blue-dark: #0b506b;
+$blue-light: #139eb9;
+$blue-shadow: #011c33;
 
-$pink-dark: #AE252A;
-$pink-light: #EBBBC3;
-$pink-shadow: #E30421;
+$pink-dark: #ae252a;
+$pink-light: #ebbbc3;
+$pink-shadow: #e30421;
 
-$green-dark: #B2D795;
-$green-light: #95C11F;
+$green-dark: #b2d795;
+$green-light: #95c11f;
+
+// Create your own map
+$custom-colors: (
+  'blue-dark': $blue-dark,
+  'blue-light': $blue-light,
+  'blue-shadow': $blue-shadow,
+  'pink-dark': $pink-dark,
+  'pink-light': $pink-light,
+  'pink-shadow': $pink-shadow,
+  'green-dark': $green-dark,
+  'green-light': $green-light,
+);
 
 $body-color: $blue-dark;
 $body-bg: $white;
@@ -26,65 +38,73 @@ $link-color: $blue-dark;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
-$font-family-base: Montserrat, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
-$font-family-code: Georgia, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+$font-family-base: Montserrat, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans',
+  Arial, sans-serif;
+$font-family-code: Georgia, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans',
+  Arial, sans-serif;
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-xs: $font-size-base * 0.75; //12
+$font-size-sm: $font-size-base * 0.875; //14
+$font-size-lg: $font-size-base * 1.125; // 18
 
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              2 !default;
+$line-height-base: 1.4;
+$line-height-sm: 1.2;
+$line-height-lg: 2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size: $font-size-base * 2.875; //46
+$h2-font-size: $font-size-base * 1.875; //30
+$h3-font-size: $font-size-base * 1.125; //18
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
 
-$headings-margin-bottom:      1.5rem !default;
+$headings-margin-bottom: 1.5rem;
 
+$headings-font-weight: $font-weight-medium;
+$headings-line-height: $line-height-sm;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import 'node_modules/bootstrap/scss/variables';
 @import 'node_modules/bootstrap/scss/variables-dark';
 
 // 4. Include any default map overrides here
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
-) !default;
+  5: $spacer * 2,
+  6: $spacer * 3,
+);
 
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-) !default;
+  xl: 1280px,
+  xxl: 1440px,
+);
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-) !default;
+  xl: 1200px,
+  xxl: 1400px,
+);
 
 // 5. Include remainder of required parts
 @import 'node_modules/bootstrap/scss/maps';
@@ -104,6 +124,8 @@ $container-max-widths: (
 @import 'node_modules/bootstrap/scss/utilities/api';
 
 // 8. Add additional custom code here
+@import 'vendors/remixicon';
+
 @import 'base/custom';
 @import 'sections/header';
 @import 'sections/footer';
