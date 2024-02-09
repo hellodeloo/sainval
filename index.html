@@ -22,7 +22,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favico/favicon-16x16.png">
-    <link rel="manifest" href="images/favico/site.webmanifest">
 
     <link rel="shortcut icon" href="images/favico/favico.ico" type="image/ico">
     <link rel="stylesheet" href="stylesheets/app.css" />
@@ -59,16 +58,6 @@
 
       <main class="s-main" role="main">
 
-        <section class="s-section">
-          <div class="s-section__container container">
-            <div class="s-section__row row">
-              <div class="s-section__col col-12">
-                <p>Base section content</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section class="s-chiffres">
           <div class="s-chiffres__container container">
             <div class="s-chiffres__row row justify-content-center">
@@ -92,13 +81,74 @@
           </div>
         </section>
 
+        <section class="s-valeurs">
+          <div class="s-valeurs__container container">
+            <div class="s-valeurs__row row">
+              <div class="s-valeurs__col s-valeurs__col--bg col-12 col-xl-3 d-none d-xl-inline-flex"></div>
+              <div class="s-valeurs__col s-valeurs__col--content col-12 col-xl-9">
+                <h2 class="h1">Nos Valeurs</h2>
+                <p class="fs-lg">Nous ne sommes pas seulement vos avocats, nous sommes également des partenaires de confiance dont la mission consiste à vous guider dans le monde parfois complexe du droit de l’entreprise.</p>
+                <div class="s-valeurs__grid py-3 py-md-5">
+                  <div class="s-valeurs__grid__details">
+                    <span>Écoute</span>
+                    <div class="d-block d-md-none">
+                        <p><strong>Notre approche est avant tout centrée sur l'humain.</strong></p>
+                        <p>L’écoute de l’exposé de votre projet, la compréhension de vos objectifs, et l’identification de vos besoins sont le préalable essentiel d’un conseil pertinent.</p>
+                        <p>Pas de solutions « prêt-à-porter », nos préconisations « sur-mesure » sont le résultat de prestations calibrées.</p>
+                    </div>
+                  </div>
+                  <div class="s-valeurs__grid__details">
+                    <span>Proximité</span>
+                     <div class="d-block d-md-none">
+                        <p><strong>Nous comprenons que le monde juridique puisse être dense et intimidant.</strong></p>
+                        <p>Nous nous engageons à rendre le processus juridique aussi accessible et compréhensible que possible. Nous vous expliquons chaque étape en des termes clairs, pour mesurer vos enjeux et trouver ensemble la solution adaptée.</p>
+                        <p>Nous échangeons d'égal à égal, quelle que soit la taille de votre entreprise ou l’étendue de votre sensibilité juridique.</p>
+                    </div>
+                  </div>
+                  <div class="s-valeurs__grid__details">
+                    <span>Implication</span>
+                     <div class="d-block d-md-none">
+                        <p><strong>Nous nous investissons pleinement dans chacun de nos dossiers, travaillant avec ténacité pour obtenir les meilleurs résultats : votre intérêt est notre priorité.</strong></p>
+                        <p>La mise en œuvre efficace de nos préconisations est assurée par une équipe engagée, pluridisciplinaire et complémentaire.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="s-valeurs__grid__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrid" aria-expanded="false" aria-controls="collapseGrid"><i class="ri-arrow-right-line ri-3x"></i></button>
+                <div class="collapse" id="collapseGrid">
+                  <div class="s-valeurs__grid">
+                    <div class="s-valeurs__grid__details">
+                      <div>
+                        <p><strong>Notre approche est avant tout centrée sur l'humain.</strong></p>
+                        <p>L’écoute de l’exposé de votre projet, la compréhension de vos objectifs, et l’identification de vos besoins sont le préalable essentiel d’un conseil pertinent.</p>
+                        <p>Pas de solutions « prêt-à-porter », nos préconisations « sur-mesure » sont le résultat de prestations calibrées.</p>
+                      </div>
+                    </div>
+                    <div class="s-valeurs__grid__details">
+                      <div>
+                        <p><strong>Nous comprenons que le monde juridique puisse être dense et intimidant.</strong></p>
+                        <p>Nous nous engageons à rendre le processus juridique aussi accessible et compréhensible que possible. Nous vous expliquons chaque étape en des termes clairs, pour mesurer vos enjeux et trouver ensemble la solution adaptée.</p>
+                        <p>Nous échangeons d'égal à égal, quelle que soit la taille de votre entreprise ou l’étendue de votre sensibilité juridique.</p>
+                      </div>
+                    </div>
+                    <div class="s-valeurs__grid__details">
+                      <div>
+                        <p><strong>Nous nous investissons pleinement dans chacun de nos dossiers, travaillant avec ténacité pour obtenir les meilleurs résultats : votre intérêt est notre priorité.</strong></p>
+                        <p>La mise en œuvre efficace de nos préconisations est assurée par une équipe engagée, pluridisciplinaire et complémentaire.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
       </main>
 
       <footer role="contentinfo" id="footer">
   <section class="s-footer">
     <div class="s-footer__container container">
       <div class="s-footer__row row">
-        <div class="s-footer__col s-footer__col--nav col-12 col-md-4 col-lg-3">
+        <div class="s-footer__col s-footer__col--nav col-12 col-md-3 col-xl-2">
           <div>
             <img src="images/sainval-logo.png" class="img-fluid" width="150" alt="">
           </div>
@@ -112,7 +162,7 @@
 </ul>
 
         </div>
-        <div class="s-footer__col s-footer__col--legal col-12 col-md-8 col-lg-9">
+        <div class="s-footer__col s-footer__col--legal col-12 col-md-9 col-xl-10">
           <div class="text-md-end">
             <a href="https://www.linkedin.com/company/sainval-avocats/" target="_blank"><i class="ri-linkedin-box-fill ri-2x"></i></a>
           </div>
@@ -142,9 +192,9 @@
 </footer>
 
 
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-      <script src="javascripts/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <script src="javascripts/app.js"></script>
   </body>
 
 </html>
