@@ -182,8 +182,8 @@
       background-image: var(--bg-img);
       background-repeat: no-repeat;
       background-size: contain;
-      //   opacity: 0.3;
-      //   transition: opacity 0.9s 1s ease-in;
+      opacity: 0.2;
+      transition: opacity 0.6s ease-in;
     }
   }
 
@@ -217,8 +217,20 @@
         }
       }
 
+      h1 {
+        opacity: 0.6;
+        transition: opacity 0.3s ease-in;
+      }
+
+      h2 {
+        opacity: 0.4;
+        transition: opacity 0.6s 0.3s ease-in;
+      }
+
       p {
         font-size: $font-size-lg;
+        opacity: 0.2;
+        transition: opacity 0.6s 0.6s ease-in;
       }
     }
   }
@@ -251,6 +263,12 @@
       &::before {
         opacity: 1;
       }
+    }
+
+    p,
+    h2,
+    h1 {
+      opacity: 1;
     }
   }
 }

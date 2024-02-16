@@ -33,4 +33,54 @@
       }
     }
   }
+
+  #close {
+    display: none;
+    z-index: 100;
+  }
+
+  #burgerNav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    @extend .p-0;
+    background-color: $pink-light;
+    box-shadow: -10px 12px 19px -10px rgba($primary, 0.1);
+    width: 100%;
+    max-width: 420px;
+    top: 0;
+    height: 100vh;
+
+    > nav {
+      font-size: $font-size-lg;
+      margin-top: 102px;
+
+      ul {
+        border-top: 1px solid $blue-dark;
+        padding: map-get($spacers, 6);
+
+        li {
+          padding: map-get($spacers, 2) 0;
+        }
+      }
+    }
+  }
+
+  &.is-opened {
+    #burgerNav {
+      display: flex;
+    }
+
+    #close {
+      display: block;
+      position: relative;
+      z-index: 100;
+    }
+
+    #open {
+      display: none;
+    }
+  }
 }
