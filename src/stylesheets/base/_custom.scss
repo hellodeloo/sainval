@@ -37,6 +37,7 @@ q {
 
 .container {
   max-width: map-get($container-max-widths, 'xxl');
+  @extend .g-6;
 }
 
 .img-fitcover {

@@ -353,6 +353,42 @@
   }
 }
 
+.s-competences {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  article {
+    background-image: url('../images/domaines-picto.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 25px auto;
+    padding: map-get($spacers, 5) map-get($spacers, 3) map-get($spacers, 3)
+      map-get($spacers, 3);
+
+    @include media-breakpoint-up(md) {
+      padding: map-get($spacers, 5) map-get($spacers, 4) map-get($spacers, 4)
+        map-get($spacers, 4);
+    }
+  }
+
+  &__col {
+    @include media-breakpoint-up(lg) {
+      &:nth-child(1) article,
+      &:nth-child(2) article,
+      &:nth-child(3) article,
+      &:nth-child(4) article {
+        border-top: map-get($spacers, 5) solid $pink-light;
+        background-image: none;
+      }
+    }
+  }
+}
+
 .s-mentions {
   padding-top: 0;
   padding-bottom: 0;
