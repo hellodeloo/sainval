@@ -69,7 +69,7 @@
   &__col {
     &--bg {
       background-color: $white;
-      background-image: url('../images/valeurs-bg.png');
+      background-image: url('../images/valeurs-bg.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top center;
@@ -420,7 +420,7 @@
   &__col {
     &--bg {
       background-color: $white;
-      background-image: url('../images/valeurs-bg.png');
+      background-image: url('../images/valeurs-bg.jpg');
       background-repeat: no-repeat;
       background-size: 100% auto;
       background-position: top center;
@@ -437,7 +437,7 @@
     }
   }
 
-  a {
+  a:not(.btn) {
     color: $white;
     text-decoration: none;
 
