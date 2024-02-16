@@ -21,7 +21,7 @@ body {
 
 b,
 strong {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
 }
 
 button {
@@ -80,6 +80,23 @@ q {
   --bs-btn-active-color: var(--bs-btn-hover-color);
   --bs-btn-active-bg: var(--bs-pink-light);
   --bs-btn-active-border-color: var(--bs-pink-light);
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+}
+
+.btn-white {
+  --bs-btn-font-weight: 400;
+  --bs-btn-color: var(--bs-blue-dark);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-blue-dark);
+  --bs-btn-hover-bg: var(--bs-white);
+  --bs-btn-hover-border-color: var(--bs-white);
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--bs-white);
+  --bs-btn-active-border-color: var(--bs-white);
   line-height: 1.2;
   text-transform: uppercase;
   padding: 1rem 2rem;
