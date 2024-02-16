@@ -30,6 +30,11 @@ button {
   padding: 0;
 }
 
+q {
+  quotes: '“ ' ' ”';
+  font-style: italic;
+}
+
 .container {
   max-width: map-get($container-max-widths, 'xxl');
 }
@@ -37,6 +42,10 @@ button {
 .img-fitcover {
   object-fit: cover;
   width: 100%;
+}
+
+.has-border-top {
+  border-top: 1px solid $blue-dark;
 }
 
 .fs-base {
@@ -57,4 +66,21 @@ button {
 
 .ff-base {
   font-family: $font-family-base;
+}
+
+.btn-pink {
+  --bs-btn-font-weight: 400;
+  --bs-btn-color: var(--bs-blue-dark);
+  --bs-btn-bg: var(--bs-pink-light);
+  --bs-btn-border-color: var(--bs-pink-light);
+  --bs-btn-hover-color: var(--bs-blue-dark);
+  --bs-btn-hover-bg: var(--bs-pink-light);
+  --bs-btn-hover-border-color: var(--bs-pink-light);
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--bs-pink-light);
+  --bs-btn-active-border-color: var(--bs-pink-light);
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
 }

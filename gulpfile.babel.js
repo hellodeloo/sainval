@@ -162,7 +162,7 @@ function watch() {
 const dev = gulp.series(cleandist, html, scripts, styles, images, fonts, files, serve, watch);
 gulp.task('dev', dev);
 
-const build = gulp.series(cleandist, html, scripts, purgestyles, fonts, files);
+const build = gulp.series(cleandist, html, scripts, purgestyles, images, fonts, files);
 gulp.task('build', build);
 
 export default dev;

@@ -3,7 +3,6 @@
 }
 
 .s-chiffres {
-  border-top: 1px solid $blue-dark;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
@@ -164,6 +163,153 @@
 
     @include media-breakpoint-up(md) {
       display: inherit;
+    }
+  }
+}
+
+.s-article-figure {
+  position: relative;
+
+  @include media-breakpoint-up(xl) {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50vw;
+      height: 100%;
+      right: 0;
+      background-color: $black;
+      background-image: var(--bg-img);
+      background-repeat: no-repeat;
+      background-size: contain;
+      //   opacity: 0.3;
+      //   transition: opacity 0.9s 1s ease-in;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &::before {
+      background-size: cover;
+    }
+  }
+
+  &__col {
+    &--article {
+      order: 1;
+      background-color: $white;
+
+      article {
+        padding: map-get($spacers, 3);
+        padding-bottom: map-get($spacers, 5);
+
+        @include media-breakpoint-up(md) {
+          padding: map-get($spacers, 8);
+        }
+
+        @include media-breakpoint-up(xl) {
+          padding: map-get($spacers, 9);
+          padding-left: map-get($spacers, 5);
+        }
+
+        @include media-breakpoint-up(xxl) {
+          padding: map-get($spacers, 10);
+          padding-left: map-get($spacers, 5);
+        }
+      }
+
+      p {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  &.is-ltr {
+    &::before {
+      right: initial;
+      left: 0;
+    }
+
+    .s-article-figure__col--article {
+      order: 2;
+
+      article {
+        @include media-breakpoint-up(xl) {
+          padding-left: map-get($spacers, 9);
+          padding-right: map-get($spacers, 5);
+        }
+
+        @include media-breakpoint-up(xxl) {
+          padding-left: map-get($spacers, 10);
+          padding-right: map-get($spacers, 5);
+        }
+      }
+    }
+  }
+
+  &.has-load-transition {
+    @include media-breakpoint-up(xl) {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.s-baseline {
+  background-color: $blue-light;
+  color: $white;
+  text-align: center;
+  font-size: $h2-font-size;
+  font-family: $font-family-code;
+  padding: map-get($spacers, 4) map-get($spacers, 3);
+
+  @include media-breakpoint-up(md) {
+    padding: map-get($spacers, 6);
+  }
+}
+
+.s-associees {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__name {
+    display: block;
+    font-size: $h2-font-size;
+    font-family: $font-family-code;
+    font-style: italic;
+    line-height: $line-height-sm;
+    margin-bottom: map-get($spacers, 1);
+  }
+
+  &__titre {
+    display: block;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    border-top: map-get($spacers, 5) solid $pink-light;
+    padding: map-get($spacers, 3);
+
+    @include media-breakpoint-up(md) {
+      padding: map-get($spacers, 4);
+      min-height: 190px;
+    }
+  }
+
+  article {
+    margin-bottom: map-get($spacers, 5);
+    padding: 0 map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 3);
+
+    @include media-breakpoint-up(md) {
+      padding: 0 map-get($spacers, 4) map-get($spacers, 4) map-get($spacers, 4);
     }
   }
 }
