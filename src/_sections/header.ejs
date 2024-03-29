@@ -13,7 +13,14 @@
         </div>
         <div id="burgerNav">
             <nav role="navigation" aria-label="Navigation principale pour mobile">
-                <%- include('../_partials/menu') %>
+                <ul class="list-unstyled">
+                    <li><a href="/" <% if (locals.currentItem==='accueil' ) { %>class="is-active"<% } %>>ACCUEIL</a></li>
+                    <li><a href="cabinet.html" <% if (locals.currentItem==='cabinet' ) { %>class="is-active"<% } %>>LE CABINET</a></li>
+                    <li><a href="domaines-de-competences.html" <% if (locals.currentItem==='domaines' ) { %>class="is-active"<% } %>>DOMAINES DE COMPÉTENCES</a></li>
+                    <li><a href="tarifs.html" <% if (locals.currentItem==='tarifs' ) { %>class="is-active"<% } %>>TARIFS</a></li>
+                    <li><a href="contact.html" <% if (locals.currentItem==='contact' ) { %>class="is-active"<% } %>>CONTACT</a></li>
+                    <li><a href="mentions-legales.html" <% if (locals.currentItem==='mentions' ) { %>class="is-active"<% } %>>Mentions légales</a></li>
+                  </ul>
             </nav>
         </div>
       </div>
