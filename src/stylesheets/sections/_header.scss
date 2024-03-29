@@ -14,9 +14,14 @@
 
   &__col {
     &--logo {
-      min-height: 100px;
 
       img {
+        max-height: 64px;
+
+        @include media-breakpoint-up(xl) {
+          max-height: 100px;
+        }
+
         .p-home & {
           display: none;
         }
@@ -34,13 +39,8 @@
     }
   }
 
-  #close {
-    display: none;
-    z-index: 100;
-  }
-
   #burgerNav {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: fixed;
     z-index: 10;
@@ -52,10 +52,22 @@
     max-width: 420px;
     top: 0;
     height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    > button {
+        position: absolute;
+        top: 32px;
+        right: 32px
+    }
 
     > nav {
       font-size: $font-size-lg;
-      margin-top: 102px;
+      margin-top: 64px;
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 100px;
+      }
 
       ul {
         border-top: 1px solid $blue-dark;
@@ -80,17 +92,7 @@
 
   &.is-opened {
     #burgerNav {
-      display: flex;
-    }
-
-    #close {
-      display: block;
-      position: relative;
-      z-index: 100;
-    }
-
-    #open {
-      display: none;
+        transform: translateX(0);
     }
   }
 }

@@ -183,14 +183,6 @@
       background-color: $dark;
       background-image: var(--bg-img);
       background-repeat: no-repeat;
-      background-size: contain;
-      opacity: 0.8;
-      transition: opacity 0.6s ease-in;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &::before {
       background-size: cover;
     }
   }
@@ -217,22 +209,25 @@
           padding: map-get($spacers, 10);
           padding-left: map-get($spacers, 5);
         }
+
+        transform: translateY(16px);
+        transition: transform 0.9s cubic-bezier(.61,.6,.51,.91);
       }
 
       h1 {
-        opacity: 0.6;
-        transition: opacity 0.3s ease-in;
+        opacity: 0.1;
+        transition: opacity 1.2s ease-in-out;
       }
 
       h2 {
-        opacity: 0.4;
-        transition: opacity 0.6s 0.3s ease-in;
+        opacity: 0;
+        transition: opacity 0.9s ease-in-out 0.3s;
       }
 
       p {
         font-size: $font-size-lg;
-        opacity: 0.2;
-        transition: opacity 0.6s 0.6s ease-in;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out 0.6s;
       }
     }
   }
@@ -261,10 +256,9 @@
   }
 
   &.has-load-transition {
-    @include media-breakpoint-up(xl) {
-      &::before {
-        opacity: 1;
-      }
+
+    article {
+        transform: translateY(0);
     }
 
     p,

@@ -1,3 +1,4 @@
+const main = document.querySelector('main');
 const burgerNav = document.querySelector('.s-header');
 const burgerToggleList = document.querySelectorAll('[data-toggle=burger]');
 const articleFigureList = document.querySelectorAll('.s-article-figure');
@@ -39,3 +40,11 @@ for (let i = 0, ii = burgerToggleList.length; i < ii; i += 1) {
     }
   });
 }
+
+// Close Burger Nav on click <main>
+main.addEventListener('click', function (e) {
+  if (burgerNav.classList.contains('is-opened')) {
+    burgerNav.classList.remove('is-opened');
+    console.log('machin');
+  }
+});
