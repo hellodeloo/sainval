@@ -14,12 +14,19 @@
 
   &__col {
     &--logo {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      min-height: 64px;
+
+      @include media-breakpoint-up(xl) {
+        min-height: 100px;
+      }
 
       img {
-        max-height: 64px;
+        max-height: 40px;
 
         @include media-breakpoint-up(xl) {
-          max-height: 100px;
+          max-height: 76px;
         }
 
         .p-home & {
@@ -29,8 +36,8 @@
     }
 
     &--biglogo {
-      padding-top: 260px;
-      padding-bottom: 280px;
+      padding-top: 130px;
+      padding-bottom: 150px;
       display: none;
 
       .p-home & {
@@ -56,9 +63,13 @@
     transition: transform 0.3s ease;
 
     > button {
-        position: absolute;
+      position: absolute;
+      right: 32px;
+      top: 12px;
+
+      @include media-breakpoint-up(xl) {
         top: 32px;
-        right: 32px
+      }
     }
 
     > nav {
@@ -77,13 +88,13 @@
           padding: map-get($spacers, 2) 0;
 
           a {
-              &.is-active {
-                font-weight: $font-weight-semibold;
-              }
+            &.is-active {
+              font-weight: $font-weight-semibold;
+            }
 
-              &:hover {
-                color: $pink-dark;
-              }
+            &:hover {
+              color: $pink-dark;
+            }
           }
         }
       }
@@ -92,7 +103,7 @@
 
   &.is-opened {
     #burgerNav {
-        transform: translateX(0);
+      transform: translateX(0);
     }
   }
 }
