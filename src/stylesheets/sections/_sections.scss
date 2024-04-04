@@ -177,7 +177,7 @@
       content: '';
       display: block;
       position: absolute;
-      width: 50vw;
+      width: calc(50vw - 8px);
       height: 100%;
       right: 0;
       background-color: $dark;
@@ -211,7 +211,7 @@
         }
 
         transform: translateY(16px);
-        transition: transform 0.9s cubic-bezier(.61,.6,.51,.91);
+        transition: transform 0.9s cubic-bezier(0.61, 0.6, 0.51, 0.91);
       }
 
       h1 {
@@ -256,9 +256,8 @@
   }
 
   &.has-load-transition {
-
     article {
-        transform: translateY(0);
+      transform: translateY(0);
     }
 
     p,
