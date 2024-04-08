@@ -255,6 +255,16 @@
     }
   }
 
+  &.is-map-bg {
+    @include media-breakpoint-up(xl) {
+      min-height: 500px;
+
+      &::before {
+        background-position: center;
+      }
+    }
+  }
+
   &.has-load-transition {
     article {
       transform: translateY(0);
