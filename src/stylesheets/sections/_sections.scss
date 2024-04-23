@@ -265,6 +265,21 @@
     }
   }
 
+  &.is-hp-bg {
+    @include media-breakpoint-up(lg) {
+      &::before {
+        background-position: top center;
+        background-size: contain;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      &::before {
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+
   &.has-load-transition {
     article {
       transform: translateY(0);
