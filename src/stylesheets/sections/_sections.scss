@@ -272,7 +272,7 @@
         background-size: contain;
       }
     }
-    @include media-breakpoint-up(xxl) {
+    @include media-breakpoint-up(xxxl) {
       &::before {
         background-position: center;
         background-size: cover;
